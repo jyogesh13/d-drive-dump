@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="./grid.css">
+    <!-- <style>
+        .container{
+            display: grid;
+
+            /* width of css grid columns */
+            grid-template-columns: 100px 100px 100px auto;
+            /* or */
+            /* grid-template-columns: repeat(10, auto); */
+            
+            /* for gap between columns */
+            grid-gap: 2rem;
+            
+            /* dividing grid into rows */
+            /* grid-template-rows: repeat(5,auto); */
+            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); /* minmax(minwidth,maxgap)*/
+
+            justify-content: center;
+            align-items: center;
+
+        }
+        .item{
+            height: 100px;
+            background: #9e6666;
+            border: 2px solid black;
+            padding: 12px 6px;
+        }
+        .item:first-child{
+            /* to merge columns together */
+            /* grid-column-start: 1 ;
+            grid-column-end: 3; */
+            /* or */
+            grid-column: 1/span 3;
+
+            /* to merge rows */
+            grid-row: 1/span 3;
+        } 
+        
+    </style> -->
+</head>
+
+<body>
+    <!-- CSS grid creates a two dimensional layout 
+    with container being the main box and the items being the child present inside the box. 
+    CSS grid is one of the ways to create a layout. -->
+    <!-- <div class="container"> 
+        <div class="item">this is Item-1</div>
+        <div class="item">this is Item-2</div>
+        <div class="item">this is Item-3</div>
+        <div class="item">this is Item-4</div>
+        <div class="item">this is Item-5</div>
+        <div class="item">this is Item-6</div>
+        <div class="item">this is Item-7</div>
+        <div class="item">this is Item-8</div>
+        <div class="item">this is Item-9</div>
+        <div class="item">this is Item-10</div>
+        <div class="item">this is Item-11</div>
+        <div class="item">this is Item-12</div>
+        <div class="item">this is Item-13</div>
+        <div class="item">this is Item-14</div>
+        <div class="item">this is Item-15</div>
+    </div> -->
+    <div class="container">
+        <div class="item item-1">This is item 1</div>
+        <div class="item item-2">This is item 2</div>
+        <div class="item item-3">This is item 3</div>
+        <div class="item item-4">This is item 4</div>
+        <div class="item item-5">This is item 5</div>
+    </div>
+</body>
+
+</html>

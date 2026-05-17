@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.myContainer{
+    @apply container px-40 mx-auto max-w-6xl relative z-1;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}

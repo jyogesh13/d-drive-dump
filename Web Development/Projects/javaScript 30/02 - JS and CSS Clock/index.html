@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JS + CSS Clock</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <style>
+    html {
+      background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+      background-size: cover;
+      font-family: "helvetica neue";
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid white;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+        inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .center {
+      width: 1vw;
+      height: 1vw;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 165px;
+      left: 159px;
+      z-index: 3;
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /* account for the height of the clock hands */
+      transform: translateX(-3px);
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      transform: rotate(90deg);
+      transform-origin: 100%;
+      transition: all cubic-bezier(0.12, 3.48, 0.44, 1) 0.05s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="center"></div>
+    <div class="clock-face">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+    </div>
+  </div>
+
+  <script>
+
+    function stopTransition(){
+      const hand = document.querySelector('.hand');
+      hand.style.transition = 'none'; // Disable transition
+      setTimeout(()=>{
+        hand.style.transition = "all cubic-bezier(0.12, 3.48, 0.44, 1) 0.05s"; // Reapply the original transition
+      },1000) // Small delay to ensure the transition is removed temporarily
+    }
+
+    function runclock(){
+      let now = new Date();
+      let seconds = now.getSeconds();
+      let minutes = now.getMinutes();
+      let hour = now.getHours();
+
+      console.log("Seconds: ", seconds);
+      // console.log("Minutes: ",minutes);
+      // console.log("Hour: ",hour);
+
+      let secHandDegree = (seconds * 6) + 90;
+      let minHandDegree = (minutes * 6) + 90;
+      let hourHandDegree = (hour * 30 + minutes / 2) + 90;
+
+      if (secHandDegree == 450){
+        stopTransition()
+      }
+      document.querySelector(
+        ".second-hand"
+      ).style.transform = `rotate(${secHandDegree}deg)`;
+      document.querySelector(
+        ".min-hand"
+      ).style.transform = `rotate(${minHandDegree}deg)`;
+      document.querySelector(
+        ".hour-hand"
+      ).style.transform = `rotate(${hourHandDegree}deg)`;
+    }
+
+    setInterval(runclock, 1000);
+  </script>
+</body>
+
+</html>

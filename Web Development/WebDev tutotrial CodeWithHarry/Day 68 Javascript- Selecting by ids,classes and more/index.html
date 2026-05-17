@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: Selecting by Ids, Classes and more</title>
+    <style>
+        body{
+            background-color: rgb(26, 185, 111);
+        }
+        .outer-box{
+            width: fit-content;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .box:hover{
+            background-color: rgb(155, 170, 237);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <h1>Id selection, Class selection and more</h1>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

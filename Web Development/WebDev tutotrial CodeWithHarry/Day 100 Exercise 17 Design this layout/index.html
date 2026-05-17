@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+</head>
+
+<body>
+    <div class="outer-box flex flex-wrap gap-[2px]">
+        <div class="container w-fit p-[10px] flex justify-center items-center bg-black gap-[5px] text-white">
+            <div class="img-container relative">
+                <img src="" alt="" class="w-[10vw] rounded-sm" />
+                <p class="timer absolute top-[64%] right-[3px] px-[3px] py-[1px] bg-black rounded-sm">
+                    35:00
+                </p>
+            </div>
+            <div class="content flex flex-col gap-[10px] mb-[35px]">
+                <div class="title">${title}</div>
+                <div class="info text-sm text-green-100">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let img_url = "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"
+        let cName = "CodeWithHarry";
+        let views = 1200
+        let formated_views = (() => {
+            if (views.toString().length >= 6) {
+                return (Math.round(views / Math.pow(10, 6)) + "M")
+            }
+            else if (views.toString().length >= 4) {
+                return (Math.round(views / Math.pow(10, 3)) + "K")
+            }
+            else {
+                return views.toString();
+            }
+        })(views);
+        
+        let monthsOld = 7;
+        let title = "Introduction to Backend | Sigma Web Dev video #2";
+
+        document.querySelector('.img-container>img').src = img_url;
+        document.querySelector('.timer').textContent = "31:22";
+        document.querySelector('.title').textContent = title;
+        document.querySelector('.info').innerHTML = `<span>${cName} . ${formated_views} views . ${monthsOld} months ago</span>`;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+    <style>
+        .container{
+            background-color: aquamarine;
+            width: 80vw;
+            height: 80vh;
+        }
+        .box{
+            background-color: azure;
+            width: 10vw;
+            height: 10vh;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: animation1 3s ease-in 1s infinite reverse;
+        }
+
+        @keyframes animation1 {
+            from{
+                
+            }
+            to{
+                transform: translate(50vw,50vh);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            CSS Animation
+        </div>
+    </div>
+</body>
+</html>

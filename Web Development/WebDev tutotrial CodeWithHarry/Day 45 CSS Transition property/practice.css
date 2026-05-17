@@ -1,0 +1,43 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: aquamarine;
+    place-items: center;
+}
+
+.box{
+    background: beige;
+    width: 10vw;
+    height: 10vw;
+    cursor: pointer;
+    text-align: center;
+    /* align-content: center; */
+    line-height: 120px;
+    margin: 20px 20px;
+}
+
+.scaleX{
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
+}
+
+.scaleX:hover{
+    z-index: 1;
+    transform: scaleX(2);
+    background: #9c8383;
+}
+
+.scaleY{
+    transform: scaleY(1);
+    transition: transform 0.5s ease;
+}
+
+.scaleY:hover{
+    transform: scaleY(2);
+    border: 2px solid rgb(100, 213, 65);
+}

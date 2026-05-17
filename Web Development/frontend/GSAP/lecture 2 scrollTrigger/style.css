@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.page1, .page2, .page3{
+    width: 100%;
+    height: 100%;
+}
+
+.page1{
+    background-color: royalblue;
+}
+.page2{
+    background-color: rgb(71, 86, 130);
+}
+.page3{
+    background-color: rgb(13, 25, 62);
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: crimson;
+}
+
+.page2 h1{
+    font-size: 40vw;
+    text-transform: uppercase;
+
+}

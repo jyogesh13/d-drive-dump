@@ -1,0 +1,63 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    background: rgb(95, 117, 117);
+    border: 2px solid black;
+    display: grid;
+    height: 100vh;
+    /* grid-template-columns: [pehla]1fr  [dusra]2fr [teesra]3fr;
+    grid-gap: 2px; */
+
+    grid-template-areas: "nav nav nav nav"
+                "left center center right"
+                "footer footer footer footer";
+    /* grid-template-rows: 1fr 1fr; */
+
+    /* gap: row-gap column-gap */
+    /* use gap instead padding in flexbox and grid */
+    gap: 2px; 
+    /* fr units: 1 fr means one fraction of the width */
+
+    /* justify-items: center;
+    align-items: center;*/
+} 
+
+.item{
+    background: #8da3d5;
+    border: 2px solid rgb(101, 81, 81);
+    height: 20vh;
+}
+
+.item-1{
+    grid-area: nav;
+    font-size: 2em;
+    color: aqua;
+    /* stretch item-1 to first 2 columns */
+    /* grid-column: 1/ span 2;  */
+}
+
+.item-2{
+    grid-area: left;
+    color: rgb(187, 127, 53);
+    background-color: aquamarine;
+    font-size: 2em;
+
+    /* to position individual items within a cell */
+    /* align-self: start;
+    justify-self: end; */
+}
+
+.item-3{
+    grid-area: right;
+    font-size: 2em;
+}
+.item-4{
+    grid-area: center;
+    font-size: 2em;
+}
+.item-5{
+    grid-area: footer;
+    font-size: 2em;
+}

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.logo img {
+  width: 156px;
+}
+
+.services ul {
+  display: flex;
+  gap: 15px;
+}
+
+.services li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Styling the main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.first{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64vw;
+  padding: 60px;
+}
+
+.first span{
+  font-size: 45px;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.first p{
+  font-size: 24px;
+  text-align: center;
+  padding: 30px;
+  color: #1f1f1f;
+}
+
+.btn{
+  padding: 10px 30px;
+  background-color: #00b6d1;
+  font-size: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.second{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64vw;
+  padding: 24px;
+}
+
+.above_grid{
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  width: 100%;
+  gap: 10px;
+}
+
+.above_grid small{
+  font-size: 15px;
+  padding-top: 6px;
+}
+
+.above_grid img{
+  width: 51px;
+  padding: 15px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 20px;
+}
+
+.first-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9 ;
+  text-align: center;
+  gap: 13px;
+  padding: 20px;
+  /* width: 300px; */
+}
+
+.scale {
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.box:hover .scale {
+  transform: scale(1.5, 1.5);
+}
+
+.download-btn{
+  padding: 8px 24px;
+  margin-top: 10px;
+  background-color: #5cb85c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hash{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  font-size: 15px;
+  gap: 5px;
+}
+
+.hash small{
+  font-size: 9px;
+  line-height: 15px;
+  word-break: break-all;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px){
+  .cards{
+    grid-template-columns: 1fr;
+    background-color: red;
+  }
+}

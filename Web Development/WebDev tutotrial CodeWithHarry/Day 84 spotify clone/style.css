@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background: #000;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 50vw;
+}
+
+.logo img{
+    margin: 0 14px;
+    width: 35px;
+    height: 35px;
+}
+
+.home{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1f1f1f;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+.home button{
+    background: url("home_btn.svg") no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 30px;
+    border: none;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #1f1f1f;
+    padding: 10px 14px;
+    width: 29vw;
+    border-radius: 30px;
+}
+
+.search-bar img{
+    width: 30px;
+}
+.search-bar input{
+
+    width: 48%;
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-family: "Work Sans", sans-serif;
+}
+::placeholder { /* Most modern browsers support this now. */
+    color: grey;
+}
+
+.shortcut{
+    width: 10vw;
+}
+
+.shortcut span{
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 4px;
+    box-shadow: 2px 2px 5px gery inset;
+    color: grey;
+    display: none;
+}
+
+.search-sidediv{
+    display: flex;
+    gap: 10px;
+}
+.features{
+    display: flex;
+    gap: 10px;
+}
+.features-btn{
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 65px;
+    padding-right: 70px;
+}
+
+.vertical{
+    width: 1px;
+    height: 27px;
+    background: #b1b1b1;
+}
+
+.install-btn img{
+    width: 16px;
+    height: 16px;
+}
+.install-btn{
+    display: flex;
+    width: 90px;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0px 10px;
+}
+.usr-info{
+    display: flex;
+    gap: 20px;
+}
+.usr-info-btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.sign-up{
+    height: 30px;
+    width: 67px;
+}
+.log-in{
+    width: fit-content;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 30px;
+    background: white;
+    color: black;
+    font-weight: 700;
+    border-radius: 40px;
+}
+
+
+/* Main content area */
+main{
+    margin: 0 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    width: 28vw;
+    height: 80vh;
+    border-radius: 10px;
+    background: #121212;
+    position: relative;
+}
+
+.your_library{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: top right bottom left; */
+    padding: 20px 26px 46px 26px;
+}
+h2{
+    font-size: 17px;
+}
+
+h3{
+    font-size: 15px;
+}
+
+.playlist-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.bg-color-grey{
+    background: #1f1f1f;
+}
+.content{
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn{
+    margin: 5px 0;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-weight: 700;
+}
+.left-side footer{
+    position: absolute;
+    height: 10vw;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.left-side footer div{
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+}
+footer div a{
+    text-decoration: none;
+    font-size: 12px;
+    color: grey;
+}
+
+.lang{
+    
+}
+
+#sign-up-info{
+    background: linear-gradient(90deg, rgba(166,52,160,1) 35%, rgba(106,124,219,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 5px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+#sign-up-info :nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+#sign-up-info button{
+    background: white;
+    border: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 15px;
+}

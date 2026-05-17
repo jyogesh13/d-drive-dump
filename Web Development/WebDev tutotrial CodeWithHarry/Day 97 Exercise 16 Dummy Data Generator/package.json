@@ -1,0 +1,19 @@
+{
+  "name": "day-97-exercise-16-dummy-data-generator",
+  "version": "1.0.0",
+  "description": "Exercise to generate dummy data and store it in the database",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "dummy"
+  },
+  "keywords": [
+    "dummy-data"
+  ],
+  "author": "Yogesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid black;
+            box-shadow: 5px 5px 10px grey;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .display{
+            width: 90%;
+            height: 90%;
+            background: #a59f9f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="display"></div>
+        <div class="btn">
+            <button id="generate-btn">Generate Now</button>
+            <button id="delete-btn">Delete</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

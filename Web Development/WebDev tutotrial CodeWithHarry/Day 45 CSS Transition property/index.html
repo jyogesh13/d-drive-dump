@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+    <style>
+        .container{
+            background-color: bisque;
+            width: 80vw;
+            height: 80vh;
+        }
+        .box{
+            background-color: blue;
+            width: 5vw;
+            height: 5vh;
+        }
+        
+        .box:hover{
+            /* transition-property: transform;
+            transition-duration: 3s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s; 
+
+            transition: transition-property transition-duration transition-timing-function transition-delay;*/
+
+            transform: translate(10vw, 10vw) scale(2,2);
+            transition: transform 3s ease-in-out 1s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box "></div>
+    </div>
+</body>
+</html>

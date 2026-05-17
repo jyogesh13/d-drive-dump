@@ -1,0 +1,20 @@
+{
+    "exercises": [
+        {
+            "tag_id": 5,
+            "user_input": "cycled",
+            "duration_min": 30,
+            "met": 10,
+            "nf_calories": 380,
+            "photo": {
+                "highres": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/5_highres.jpg",
+                "thumb": "https://d2xdmhkmkbyw75.cloudfront.net/exercise/5_thumb.jpg",
+                "is_user_uploaded": false
+            },
+            "compendium_code": 1040,
+            "name": "road cycling",
+            "description": null,
+            "benefits": null
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* HTML: <div class="loader"></div> */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+            background-image: url("https://as2.ftcdn.net/jpg/02/48/52/27/1000_F_248522792_XxOSmPurXOVB49k7In8FrLTjjbOJTUtq.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .loader {
+            width: 60px;
+            height: fit-content;
+            aspect-ratio: 10;
+            background: radial-gradient(circle closest-side,#f8f6f6 90%,#8a3e3e00) 0/calc(100%/3) 100% space;
+            clip-path: inset(0 100% 0 0);
+            animation: l1 2s steps(4) infinite;
+        }
+        @keyframes l1 {
+            to{
+                clip-path: inset(0 -34% 0 0)
+            }
+        }
+        .stop-animation{
+            clip-path: inset(0 0 0 0);
+        }
+
+        .container{
+            padding: 10px;
+            width: 30vw;
+            height: 20vw;
+            position: absolute;
+            top: 30%;
+            right: 45%;
+            display: flex;
+            flex-direction: column;
+            background-color: #090909;
+            color: white;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div class="container">
+        <div class="text">
+            <!-- <div class="loader">
+            </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
