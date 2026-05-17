@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Setup project repository",
+    "desc": "Initialize GitHub repository and push initial commit",
+    "assignedTo": { "id": "u1", "name": "Alice" },
+    "status": "DONE",
+    "createdAt": "2025-09-01T10:15:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Design database schema",
+    "desc": "Plan and design MongoDB schema for tasks and users",
+    "assignedTo": { "id": "u2", "name": "Bob" },
+    "status": "IN_PROGRESS",
+    "createdAt": "2025-09-02T11:00:00Z"
+  },
+  {
+    "id": "3",
+    "title": "Implement authentication",
+    "desc": "Add JWT-based authentication with login/signup endpoints",
+    "assignedTo": { "id": "u3", "name": "Charlie" },
+    "status": "TODO",
+    "createdAt": "2025-09-03T09:30:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Create landing page UI",
+    "desc": "Design and implement responsive landing page",
+    "assignedTo": { "id": "u1", "name": "Alice" },
+    "status": "IN_PROGRESS",
+    "createdAt": "2025-09-04T14:20:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Setup CI/CD pipeline",
+    "desc": "Integrate GitHub Actions for automated builds and tests",
+    "assignedTo": { "id": "u2", "name": "Bob" },
+    "status": "TODO",
+    "createdAt": "2025-09-05T08:45:00Z"
+  },
+  {
+    "id": "6",
+    "title": "Write unit tests",
+    "desc": "Cover main services and controllers with unit tests",
+    "assignedTo": { "id": "u3", "name": "Charlie" },
+    "status": "TODO",
+    "createdAt": "2025-09-06T16:10:00Z"
+  },
+  {
+    "id": "7",
+    "title": "API documentation",
+    "desc": "Prepare Swagger/OpenAPI docs for REST APIs",
+    "assignedTo": { "id": "u4", "name": "Diana" },
+    "status": "DONE",
+    "createdAt": "2025-09-07T12:00:00Z"
+  },
+  {
+    "id": "8",
+    "title": "Implement dark mode",
+    "desc": "Add theme toggle with light and dark modes",
+    "assignedTo": { "id": "u1", "name": "Alice" },
+    "status": "IN_PROGRESS",
+    "createdAt": "2025-09-08T18:25:00Z"
+  },
+  {
+    "id": "9",
+    "title": "Optimize queries",
+    "desc": "Improve database performance with indexing",
+    "assignedTo": { "id": "u2", "name": "Bob" },
+    "status": "TODO",
+    "createdAt": "2025-09-09T07:50:00Z"
+  },
+  {
+    "id": "10",
+    "title": "Deployment on AWS",
+    "desc": "Deploy backend and frontend to AWS EC2 and S3",
+    "assignedTo": { "id": "u3", "name": "Charlie" },
+    "status": "IN_PROGRESS",
+    "createdAt": "2025-09-10T13:40:00Z"
+  }
+]

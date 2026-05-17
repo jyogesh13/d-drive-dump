@@ -1,0 +1,18 @@
+export const safeUser = (user: any) => ({
+  _id: user._id,
+  name: user.name,
+  username: user.username,
+  email: user.email,
+  avatar: user.avatar,
+  bio: user.bio,
+  role: user.role,
+  status: user.status,
+  authProvider: user.authProvider,
+  emailVerified: user.emailVerified,
+  subscriptionStatus: user.subscriptionStatus,
+  preferences: user.preferences,
+  socialLinks: user.socialLinks,
+  lastLoginAt: user.lastLoginAt,
+  createdAt: user.createdAt,
+  updatedAt: user.updatedAt,
+});

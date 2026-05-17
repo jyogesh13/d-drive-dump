@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a web developer passionate about building modern, responsive websites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/img/avatar.svg" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Home">
+        <img src="assets/img/avatar.svg" alt="Logo" class="logo-img" />
+        <span class="logo-text">Your Name</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 id="hero-title">Hi, I’m <span class="accent">Your Name</span>, a Web Developer passionate about building modern, responsive websites.</h1>
+        <p class="tagline">Frontend | Backend | MERN Stack Enthusiast</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">View My Projects</a>
+          <a class="btn outline" href="resume.html" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/img/avatar.svg" alt="Your avatar" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <div class="about-grid">
+        <img src="assets/img/avatar.svg" alt="Your avatar" class="about-avatar" />
+        <div>
+          <p>
+            I am a fresher web developer with a strong interest in building fast, accessible, and delightful user experiences.
+            I enjoy turning ideas into real-world products using modern web technologies.
+          </p>
+          <p>
+            I chose web development because I love the instant feedback loop of the browser and the blend of creativity and logic
+            that front-end and back-end work demands.
+          </p>
+          <p class="fun-fact">Fun fact: I once built a game clone just to understand how event listeners really work!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <div class="container">
+      <h2 id="skills-title" class="section-title">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul class="skill-list">
+            <li>
+              <span>HTML</span>
+              <div class="bar" data-level="90"><span></span></div>
+            </li>
+            <li>
+              <span>CSS</span>
+              <div class="bar" data-level="85"><span></span></div>
+            </li>
+            <li>
+              <span>JavaScript</span>
+              <div class="bar" data-level="80"><span></span></div>
+            </li>
+            <li>
+              <span>React</span>
+              <div class="bar" data-level="75"><span></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul class="skill-list">
+            <li>
+              <span>Node.js</span>
+              <div class="bar" data-level="75"><span></span></div>
+            </li>
+            <li>
+              <span>Express</span>
+              <div class="bar" data-level="70"><span></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Database</h3>
+          <ul class="skill-list">
+            <li>
+              <span>MongoDB</span>
+              <div class="bar" data-level="70"><span></span></div>
+            </li>
+            <li>
+              <span>MySQL</span>
+              <div class="bar" data-level="65"><span></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <ul class="skill-list">
+            <li>
+              <span>Git & GitHub</span>
+              <div class="bar" data-level="80"><span></span></div>
+            </li>
+            <li>
+              <span>Figma</span>
+              <div class="bar" data-level="60"><span></span></div>
+            </li>
+            <li>
+              <span>VS Code</span>
+              <div class="bar" data-level="85"><span></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section" aria-labelledby="projects-title">
+    <div class="container">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project Card Template -->
+        <article class="project-card">
+          <img src="assets/img/project1.svg" alt="Blog website thumbnail" />
+          <div class="project-content">
+            <h3>Blog Website</h3>
+            <p>A clean, responsive blog with categories, tags, and a markdown editor.</p>
+            <p class="tech">Tech: React, Node.js, MongoDB</p>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project2.svg" alt="E-commerce store clone thumbnail" />
+          <div class="project-content">
+            <h3>E-commerce Store Clone</h3>
+            <p>Product listing, cart, checkout flows with mock payments.</p>
+            <p class="tech">Tech: React, Express, MongoDB</p>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project3.svg" alt="Task Manager app thumbnail" />
+          <div class="project-content">
+            <h3>Task Manager App</h3>
+            <p>CRUD tasks with filters, drag-and-drop sorting, and persistence.</p>
+            <p class="tech">Tech: React, Node.js, MongoDB</p>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project4.svg" alt="Portfolio website thumbnail" />
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>The site you’re viewing—clean design, dark mode, and responsive.</p>
+            <p class="tech">Tech: HTML, CSS, JavaScript</p>
+            <div class="actions">
+              <a class="btn small" href="#home">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project5.svg" alt="Weather app thumbnail" />
+          <div class="project-content">
+            <h3>Weather App</h3>
+            <p>City-based weather with 7-day forecast and geolocation.</p>
+            <p class="tech">Tech: Vanilla JS, OpenWeather API</p>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project6.svg" alt="Chat app thumbnail" />
+          <div class="project-content">
+            <h3>Chat App</h3>
+            <p>Real-time chat with rooms, typing indicators, and emoji support.</p>
+            <p class="tech">Tech: React, Socket.io, Node.js</p>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a class="btn small outline" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section" aria-labelledby="education-title">
+    <div class="container">
+      <h2 id="education-title" class="section-title">Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <h3>Bachelor of Technology in Computer Science</h3>
+          <p>XYZ College, 2021–2025</p>
+        </div>
+        <div class="edu-item">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Responsive Web Design – freeCodeCamp</li>
+            <li>Meta Front-End Developer – Coursera (in progress)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form" autocomplete="on">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p class="form-note">This opens your email app to send me a message.</p>
+        </form>
+
+        <div class="contact-info">
+          <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">🔗 LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name</p>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">🔗</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

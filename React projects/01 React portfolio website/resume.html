@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name – Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --text: #111827; --muted: #374151; --accent: #6d28d9; }
+    @media (prefers-color-scheme: dark) { :root { --text: #e5e7eb; --muted: #9ca3af; background: #0b0d0f; color: var(--text); } }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; color: var(--text); }
+    .page { width: min(900px, 92%); margin: 40px auto; }
+    header { display: grid; gap: 6px; border-bottom: 2px solid #e5e7eb22; padding-bottom: 14px; }
+    h1 { margin: 0; font-size: 1.9rem; }
+    .muted { color: var(--muted); }
+    .row { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; margin-top: 18px; }
+    h2 { font-size: 1.1rem; margin: 0 0 8px; color: var(--accent); }
+    ul { margin: 6px 0 0 1.2rem; }
+    .print { position: sticky; top: 10px; float: right; margin-top: -40px; }
+    .btn { display: inline-block; padding: 8px 12px; border-radius: 10px; border: 1px solid #d1d5db55; }
+    @media print { .print { display: none; } body { background: #fff !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <button class="btn print" onclick="window.print()">Print / Save as PDF</button>
+    <header>
+      <h1>Your Name</h1>
+      <div class="muted">Web Developer • MERN Stack Enthusiast</div>
+      <div>Email: you@example.com • Phone: +1 (234) 567-890 • GitHub: github.com/yourusername • LinkedIn: linkedin.com/in/yourusername</div>
+    </header>
+
+    <section class="row">
+      <div>
+        <h2>Skills</h2>
+      </div>
+      <div>
+        HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, Git, GitHub, Figma, VS Code
+      </div>
+    </section>
+
+    <section class="row">
+      <div>
+        <h2>Projects</h2>
+      </div>
+      <div>
+        <strong>Blog Website</strong> — Full-stack blog with auth, markdown editor, and CMS-like features.<br/>
+        <em>React, Node.js, MongoDB</em>
+        <ul>
+          <li>Implemented JWT-based authentication and role-based access.</li>
+          <li>Optimized SEO with server-side rendering and meta tags.</li>
+        </ul>
+        <br/>
+        <strong>E-commerce Store Clone</strong> — Product catalog, cart, checkout with mock payments.<br/>
+        <em>React, Express, MongoDB</em>
+      </div>
+    </section>
+
+    <section class="row">
+      <div>
+        <h2>Education</h2>
+      </div>
+      <div>
+        B.Tech in Computer Science — XYZ College (2021–2025)
+      </div>
+    </section>
+
+    <section class="row">
+      <div>
+        <h2>Certifications</h2>
+      </div>
+      <div>
+        freeCodeCamp — Responsive Web Design | Coursera — Meta Front-End Developer (in progress)
+      </div>
+    </section>
+  </div>
+</body>
+</html>

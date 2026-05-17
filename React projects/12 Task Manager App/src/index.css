@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  
+  --color-dark-background: #0b0f19;
+  --color-dark-foreground: #f8fafc;
+  --color-dark-surface: #1e293b;
+  --color-dark-border: #334155;
+}
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --border: #e2e8f0;
+  }
+  .dark {
+    --background: #0b0f19;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    --border: #334155;
+  }
+  
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .dark .glass {
+    @apply bg-[#1e293b]/70 border-[#334155]/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
+
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl;
+  }
+  .dark .glass-card {
+    @apply bg-slate-800/60 border-slate-700/50 shadow-[0_4px_24px_0_rgba(0,0,0,0.2)] rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+  }
+  .dark .text-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400;
+  }
+}

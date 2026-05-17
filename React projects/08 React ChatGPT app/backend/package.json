@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "AI chat application backend",
+  "keywords": [
+    "ai",
+    "chat"
+  ],
+  "license": "MIT",
+  "author": "Yogesh Joshi",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@clerk/express": "^1.7.68",
+    "@google/genai": "^1.40.0",
+    "@imagekit/nodejs": "^7.2.2",
+    "@openrouter/ai-sdk-provider": "^2.2.3",
+    "@openrouter/sdk": "^0.8.0",
+    "@tanstack/ai": "^0.3.1",
+    "@tanstack/ai-openrouter": "^0.3.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5",
+    "nodemon": "^3.1.11"
+  }
+}

@@ -1,0 +1,312 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind utilities;
+
+/* Dark mode variant based on `.dark` class on a parent (html/body/root) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Colors (Tailwind v4 color namespace) */
+  --color-primary-500: #877EFF;
+  --color-secondary-500: #FFB620;
+  --color-blue: #0095F6;
+  --color-logout-btn: #FF5A5A;
+  --color-navbar-menu: rgba(16, 16, 18, 0.6);
+
+  --color-dark-1: #000000;
+  --color-dark-2: #121417;
+  --color-dark-3: #101012;
+  --color-dark-4: #1F1F22;
+
+  --color-light-1: #FFFFFF;
+  --color-light-2: #EFEFEF;
+  --color-light-3: #7878A3;
+  --color-light-4: #5C5C7B;
+
+  --color-gray-1: #697C89;
+  --color-glassmorphism: rgba(16, 16, 18, 0.60);
+
+  /* Shadows */
+  --shadow-count-badge: 0px 0px 6px 2px rgba(219, 188, 159, 0.30);
+  --shadow-groups-sidebar: -30px 0px 60px 0px rgba(28, 28, 31, 0.50);
+
+  /* Container max width for 2xl (Tailwind v4 uses breakpoints via --breakpoint-*) */
+  --breakpoint-xs: 400px;
+  --breakpoint-2xl: 1400px;
+
+  /* Font sizes (map to custom utilities: text-heading1-bold, etc.) */
+  --text-heading1-bold: 36px;
+  --text-heading1-bold--line-height: 140%;
+  --text-heading1-bold--font-weight: 700;
+
+  --text-heading1-semibold: 36px;
+  --text-heading1-semibold--line-height: 140%;
+  --text-heading1-semibold--font-weight: 600;
+
+  --text-heading2-bold: 30px;
+  --text-heading2-bold--line-height: 140%;
+  --text-heading2-bold--font-weight: 700;
+
+  --text-heading2-semibold: 30px;
+  --text-heading2-semibold--line-height: 140%;
+  --text-heading2-semibold--font-weight: 600;
+
+  --text-heading3-bold: 24px;
+  --text-heading3-bold--line-height: 140%;
+  --text-heading3-bold--font-weight: 700;
+
+  --text-heading4-medium: 20px;
+  --text-heading4-medium--line-height: 140%;
+  --text-heading4-medium--font-weight: 500;
+
+  --text-body-bold: 18px;
+  --text-body-bold--line-height: 140%;
+  --text-body-bold--font-weight: 700;
+
+  --text-body-semibold: 18px;
+  --text-body-semibold--line-height: 140%;
+  --text-body-semibold--font-weight: 600;
+
+  --text-body-medium: 18px;
+  --text-body-medium--line-height: 140%;
+  --text-body-medium--font-weight: 500;
+
+  --text-body-normal: 18px;
+  --text-body-normal--line-height: 140%;
+  --text-body-normal--font-weight: 400;
+
+  --text-body1-bold: 18px;
+  --text-body1-bold--line-height: 140%;
+  --text-body1-bold--font-weight: 700;
+
+  --text-base-regular: 16px;
+  --text-base-regular--line-height: 140%;
+  --text-base-regular--font-weight: 400;
+
+  --text-base-medium: 16px;
+  --text-base-medium--line-height: 140%;
+  --text-base-medium--font-weight: 500;
+
+  --text-base-semibold: 16px;
+  --text-base-semibold--line-height: 140%;
+  --text-base-semibold--font-weight: 600;
+
+  --text-base1-semibold: 16px;
+  --text-base1-semibold--line-height: 140%;
+  --text-base1-semibold--font-weight: 600;
+
+  --text-small-regular: 14px;
+  --text-small-regular--line-height: 140%;
+  --text-small-regular--font-weight: 400;
+
+  --text-small-medium: 14px;
+  --text-small-medium--line-height: 140%;
+  --text-small-medium--font-weight: 500;
+
+  --text-small-semibold: 14px;
+  --text-small-semibold--line-height: 140%;
+  --text-small-semibold--font-weight: 600;
+
+  --text-subtle-medium: 12px;
+  --text-subtle-medium--line-height: 16px;
+  --text-subtle-medium--font-weight: 500;
+
+  --text-subtle-semibold: 12px;
+  --text-subtle-semibold--line-height: 16px;
+  --text-subtle-semibold--font-weight: 600;
+
+  --text-tiny-medium: 10px;
+  --text-tiny-medium--line-height: 140%;
+  --text-tiny-medium--font-weight: 500;
+
+  --text-x-small-semibold: 7px;
+  --text-x-small-semibold--line-height: 9.318px;
+  --text-x-small-semibold--font-weight: 600;
+
+  /* Animations (v4: define animation tokens + keyframes) */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0 }
+    to { height: var(--radix-accordion-content-height) }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height) }
+    to { height: 0 }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-dark-1 text-light-1;
+  }
+}
+
+@layer components {
+
+  /* Head Text */
+  .head-text {
+    @apply text-heading2-bold text-light-1;
+  }
+
+  /* Activity */
+  .activity-card {
+    @apply flex items-center gap-2 rounded-md bg-dark-2 px-7 py-4;
+  }
+
+  /* No Result */
+  .no-result {
+    @apply text-center text-base-regular! text-light-3;
+  }
+
+  /* Community Card */
+  .community-card {
+    @apply w-full rounded-lg bg-dark-3 px-4 py-5 sm:w-96;
+  }
+
+  .community-card_btn {
+    @apply rounded-lg bg-primary-500 px-5 py-1.5 text-small-regular text-light-1! ;
+  }
+
+  /* thread card  */
+  .thread-card_bar {
+    @apply relative mt-2 w-0.5 grow rounded-full bg-neutral-800;
+  }
+
+  /* User card */
+  .user-card {
+    @apply flex flex-col justify-between gap-4 max-xs:rounded-xl max-xs:bg-dark-3 max-xs:p-4 xs:flex-row xs:items-center;
+  }
+
+  .user-card_avatar {
+    @apply flex flex-1 items-start justify-start gap-3 xs:items-center;
+  }
+
+  .user-card_btn {
+    @apply h-auto min-w-18.5 rounded-lg bg-primary-500 text-[12px] text-light-1 ;
+  }
+
+  .searchbar {
+    @apply flex gap-1 rounded-lg bg-dark-3 px-4 py-2;
+  }
+
+  .searchbar_input {
+    @apply border-none bg-dark-3 text-base-regular text-light-4 outline-none ;
+  }
+
+  .pagination {
+    @apply mt-10 flex w-full items-center justify-center gap-5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2
+      bg-primary-500 text-light-1 text-base-medium hover:bg-primary-500/90
+      transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2
+      bg-secondary-500 text-dark-1 text-base-medium hover:bg-secondary-500/90
+      transition-colors;
+  }
+
+  .btn-logout {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2
+      bg-logout-btn text-light-1 text-base-semibold hover:bg-logout-btn/90
+      transition-colors;
+  }
+
+  .glass-card {
+    background-color: var(--color-glassmorphism);
+    box-shadow: var(--shadow-groups-sidebar);
+    @apply rounded-xl border border-white/10 backdrop-blur-md;
+  }
+
+  .count-badge {
+    box-shadow: var(--shadow-count-badge);
+    @apply inline-flex items-center justify-center rounded-full
+      bg-secondary-500 text-dark-1 text-small-semibold px-2 py-0.5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .css-invert {
+    @apply invert-50 brightness-200;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+}
+
+@media (max-width: 767px) {
+  .org-switcher span:nth-child(2) {
+    display: none !important;
+  }
+}
+
+/* Tab */
+.tab {
+  @apply flex min-h-12.5 flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 ;
+}
+
+.no-focus {
+  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 ;
+}
+
+/* Account Profile  */
+.account-form_image-label {
+  @apply flex h-24 w-24 items-center justify-center rounded-full bg-dark-4;
+}
+
+.account-form_image-input {
+  @apply cursor-pointer border-none bg-transparent outline-none file:text-blue;
+}
+
+.account-form_input {
+  @apply border border-dark-4 bg-dark-3 text-light-1 ;
+}
+
+/* Comment Form */
+.comment-form {
+  @apply mt-10 flex items-center gap-4 border-y border-y-dark-4 py-5 max-xs:flex-col ;
+}
+
+.comment-form_btn {
+  @apply rounded-3xl bg-primary-500 px-8 py-2 h-10 text-small-regular! text-light-1 max-xs:w-full ;
+}

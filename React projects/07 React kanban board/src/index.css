@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body{
+    @apply bg-black;
+    @apply text-white;
+}
+/* Drag and Drop Animations */
+.dragging {
+  transform: rotate(5deg);
+  z-index: 1000;
+}
+
+.drag-preview {
+  opacity: 0.8;
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar for better UX during drag */
+.kanban-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kanban-column::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 3px;
+}
+
+.kanban-column::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 3px;
+}
+
+.kanban-column::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
